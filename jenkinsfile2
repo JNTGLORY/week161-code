@@ -1,0 +1,10 @@
+pipeline{
+    agent any
+    stages{
+        stage('mave commands'){
+            steps{
+                sh 'mvn clean compile instal package'
+            }
+        }
+    }
+}
