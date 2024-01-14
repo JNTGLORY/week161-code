@@ -1,9 +1,9 @@
 pipeline{
     agent any
     stages{
-        stage('mave commands'){
-            steps{
-                sh 'mvn clean compile instal package'
+        stage{
+            steps(maven commands){
+                sh 'clean compile install package'
             }
         }
     }
