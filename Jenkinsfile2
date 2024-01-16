@@ -4,13 +4,6 @@ pipeline{
         maven 'M2_HOME'
     }
     stages{
-        stage('sonarqube scan'){
-            steps{
-                withsonarQubeEnv('sonarserver'){
-                sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=JNTGLORY_week161-code'
-            }    
-            }
-        }
         stage('all maven commands'){
             steps{
                 sh 'mvn clean test compile install package' 
