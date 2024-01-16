@@ -4,6 +4,11 @@ pipeline{
         maven 'M2_HOME'
     }
     stages{
+        stage('all maven commands'){
+            steps{
+                sh 'mvn --version' 
+            }
+        }
  stage('sonarqube scan'){
             steps{
                 withsonarQubeEnv('sonarserver'){
