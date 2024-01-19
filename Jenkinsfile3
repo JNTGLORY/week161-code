@@ -8,7 +8,7 @@ pipeline{
                 sh 'pwd'
                 sh 'whoami'
                 sh "mkdir \$(date '+%y%m%d_%H%M%s')"
-                sh 'python3 -version'
+                sh 'python3 --version'
                 sh 'npm --version'
 
 
